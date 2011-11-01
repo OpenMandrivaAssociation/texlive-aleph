@@ -60,6 +60,6 @@ mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/aleph <<EOF
-aleph aleph \- \*aleph.ini
-lamed aleph language.dat \*lambda.ini
+aleph aleph - *aleph.ini
+lamed aleph language.dat *lambda.ini
 EOF
