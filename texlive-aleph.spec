@@ -22,27 +22,24 @@ An development of omega, using most of the extensions of TeX
 itself developed for e-TeX.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %_texmf_fmtutil_pre
 
 %post
-sed -i	-e 's/^#! \(aleph aleph \- \*aleph.ini\)/\1/'	\
-	-e 's/^#! \(lamed aleph language.dat \*lambda.ini\)/\1/'	\
-	%{_texmfdir}/web2c/fmtutil.cnf
+    %_texmf_fmtutil_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_fmtutil_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	if [ -f %{_texmfdir}/web2c/fmtutil.cnf ]; then
-	    sed -i  -e 's/^\(aleph aleph \- \*aleph.ini\)/#! \1/'	\
-		    -e 's/^\(lamed aleph language.dat \*lambda.ini\)/#! \1/'	\
-		%{_texmfdir}/web2c/fmtutil.cnf
-	fi
+	%_texmf_fmtutil_post
     fi
 
 #-----------------------------------------------------------------------
 %files
+%_texmf_fmtutil_d/aleph
 %doc %{_texmfdistdir}/doc/aleph/base/News
 %doc %{_texmfdistdir}/doc/aleph/base/readme.txt
 %doc %{_mandir}/man1/aleph.1*
@@ -61,3 +58,8 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_texmf_fmtutil_d}
+cat > %{buildroot}%{_texmf_fmtutil_d}/aleph <<EOF
+aleph aleph \- \*aleph.ini
+lamed aleph language.dat \*lambda.ini
+EOF
