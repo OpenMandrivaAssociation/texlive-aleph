@@ -1,3 +1,9 @@
+# revision 23409
+# category Package
+# catalog-ctan /systems/aleph
+# catalog-date 2009-11-09 13:03:38 +0100
+# catalog-license gpl
+# catalog-version RC2
 Name:		texlive-aleph
 Version:	RC2
 Release:	1
@@ -46,6 +52,7 @@ itself developed for e-TeX.
 %doc %{_texmfdir}/doc/man/man1/aleph.man1.pdf
 %doc %{_mandir}/man1/lamed.1*
 %doc %{_texmfdir}/doc/man/man1/lamed.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,6 +65,8 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/aleph <<EOF
 aleph aleph - *aleph.ini
