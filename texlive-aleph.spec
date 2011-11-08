@@ -6,7 +6,7 @@
 # catalog-version RC2
 Name:		texlive-aleph
 Version:	RC2
-Release:	1
+Release:	2
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
@@ -42,6 +42,7 @@ itself developed for e-TeX.
     if [ $1 -eq 0 ]; then
 	%_texmf_fmtutil_post
     fi
+    rm -fr %{_texmfvardir}/web2c/aleph
 
 #-----------------------------------------------------------------------
 %files
