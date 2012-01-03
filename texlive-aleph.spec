@@ -6,7 +6,7 @@
 # catalog-version RC2
 Name:		texlive-aleph
 Version:	RC2
-Release:	2
+Release:	3
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
