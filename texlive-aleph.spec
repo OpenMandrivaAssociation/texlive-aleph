@@ -1,12 +1,12 @@
-# revision 23409
+# revision 26069
 # category Package
 # catalog-ctan /systems/aleph
-# catalog-date 2009-11-09 13:03:38 +0100
+# catalog-date 2012-02-09 23:17:52 +0100
 # catalog-license gpl
 # catalog-version RC2
 Name:		texlive-aleph
 Version:	RC2
-Release:	4
+Release:	5
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
@@ -19,6 +19,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-tetex
 Requires:	texlive-latex
 Requires:	texlive-plain
+Requires:	texlive-lambda
 Requires:	texlive-aleph.bin
 
 %description
