@@ -1,4 +1,4 @@
-# revision 29764
+# revision 33736
 # category Package
 # catalog-ctan /systems/aleph
 # catalog-date 2012-12-31 10:35:50 +0100
@@ -6,7 +6,7 @@
 # catalog-version RC2
 Name:		texlive-aleph
 Version:	RC2
-Release:	12
+Release:	13
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
