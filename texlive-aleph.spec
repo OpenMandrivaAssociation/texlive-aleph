@@ -5,8 +5,8 @@ Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.r62387.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.doc.r62387.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
