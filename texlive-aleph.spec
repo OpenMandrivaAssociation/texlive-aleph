@@ -1,18 +1,12 @@
-# revision 33736
-# category Package
-# catalog-ctan /systems/aleph
-# catalog-date 2012-12-31 10:35:50 +0100
-# catalog-license gpl
-# catalog-version RC2
 Name:		texlive-aleph
-Version:	RC2
-Release:	17
+Version:	62387
+Release:	1
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.r62387.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.doc.r62387.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,13 +21,13 @@ An development of omega, using most of the extensions of TeX
 itself developed for e-TeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	rm -fr %{_texmfvardir}/web2c/aleph
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,12 +36,10 @@ itself developed for e-TeX.
 %doc %{_texmfdistdir}/doc/aleph/base/readme.txt
 %doc %{_mandir}/man1/aleph.1*
 %doc %{_texmfdistdir}/doc/man/man1/aleph.man1.pdf
-%doc %{_mandir}/man1/lamed.1*
-%doc %{_texmfdistdir}/doc/man/man1/lamed.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
