@@ -1,6 +1,6 @@
 Name:		texlive-aleph
 Version:	62387
-Release:	1
+Release:	2
 Summary:	Extended TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/aleph
