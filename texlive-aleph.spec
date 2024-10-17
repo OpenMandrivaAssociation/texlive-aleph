@@ -3,7 +3,7 @@ Version:	62387
 Release:	2
 Summary:	Extended TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/aleph
+URL:		https://www.ctan.org/tex-archive/systems/aleph
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/aleph.doc.r%{version}.tar.xz
